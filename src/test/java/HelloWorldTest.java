@@ -21,32 +21,43 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HelloWorldTest {
 
 //  private static String Base_Url = "https://www.facebook.com";
-    private static String Base_Url = "http://parabank.parasoft.com";
-    private WebDriver driver;
+//    private static String Base_Url = "http://parabank.parasoft.com";
+//    private WebDriver driver;
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/home/netphenix/Downloads/chromedriver_linux64/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get(Base_Url);
+//        System.setProperty("webdriver.chrome.driver", "/home/netphenix/Downloads/chromedriver_linux64/chromedriver.exe");
+//        driver = new ChromeDriver();
+//        driver.get(Base_Url);
     }
 
     @After
     public void after() {
-        driver.quit();
+//        driver.quit();
+    }
+    
+       @Test
+    public void testFormMessage() {
+        //Asserts that two Strings are equal                
+        String expResult = "Hello World";
+        String result = "Hello World";
+        System.out.println("* HelloWorldTest: test method 1 testFormMessage()");
+        Assert.assertEquals(expResult, result);
+
+        
     }
 
-    @Test
-    public void successfulLoginLogout() {
-
-        Assert.assertEquals(driver.getTitle(), "ParaBank | Welcome | Online Banking");
-        driver.findElement(By.name("username")).sendKeys("john");
-        driver.findElement(By.name("password")).sendKeys("demo");
-        driver.findElement(By.cssSelector("input[value='Log In']")).click();
-        Assert.assertEquals(driver.getTitle(), "ParaBank | Accounts Overview");
-        driver.findElement(By.linkText("Log Out")).click();
-        Assert.assertEquals(driver.getTitle(), "ParaBank | Welcome | Online Banking");
-    }
+//    @Test
+//    public void successfulLoginLogout() {
+//
+//        Assert.assertEquals(driver.getTitle(), "ParaBank | Welcome | Online Banking");
+//        driver.findElement(By.name("username")).sendKeys("john");
+//        driver.findElement(By.name("password")).sendKeys("demo");
+//        driver.findElement(By.cssSelector("input[value='Log In']")).click();
+//        Assert.assertEquals(driver.getTitle(), "ParaBank | Accounts Overview");
+//        driver.findElement(By.linkText("Log Out")).click();
+//        Assert.assertEquals(driver.getTitle(), "ParaBank | Welcome | Online Banking");
+//    }
 //    @Test
 //    public void testCasePassed()
 //    {
