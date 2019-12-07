@@ -18,7 +18,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author netphenix
  */
-public class HelloWorldTest {
+public class Test_n {
 
 //  private static String Base_Url = "https://www.facebook.com";
 //    private static String Base_Url = "http://parabank.parasoft.com";
